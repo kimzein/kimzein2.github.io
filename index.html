@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naverstore</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+
+    <style>
+
+        @font-face {
+            font-family: 'SeoulAlrimTTF-Heavy';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/SeoulAlrimTTF-Heavy.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+}
+
+        *{
+            font-family: 'NanumSquare';
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        #section{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .sectiontitle{
+           text-align: center;
+           margin: 1.5em 0;
+           font-size: 3em;
+           font-family: 'SeoulAlrimTTF-Heavy';
+        }
+
+        .listbox{
+            border: solid;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+            
+        }
+        
+        .list{
+            border: solid #999;
+            
+            
+            
+        }
+        
+        .list:hover .image{
+            transform: scale(1.1);
+        }
+        
+        .imagebox{
+            overflow: hidden;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .image{
+            width: 100%;
+            display: block;
+            transition: 0.3s;
+            
+        }
+
+        .producttitle{
+            margin-bottom: 10px;
+         }
+
+        .text{
+            
+            line-height: 1.5em;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        .price{
+            color: rgb(155, 2, 2);
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .price2{
+            color: #999;
+            text-decoration: line-through;
+            display: inline-block;
+
+        }
+
+        .best{
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 15%;
+            
+        }
+
+        .iconbox{
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .list:hover .iconbox{
+            opacity: 1;
+        }
+
+        .icon{
+            color: #fff;
+            font-size: 2em;
+            padding: 20px;
+            opacity: 90%;
+          
+        }
+
+        /*태블릿화면 (850-900px이하 화면폭) 스타일*/
+        @media screen and (max-width:850px){
+          .listbox{
+            grid-template-columns: repeat(2,1fr);
+          }
+        }
+        /*스마트폰화면 (450px이하 화면폭) 스타일*/
+        @media screen and (max-width:450px){
+          .listbox{
+            grid-template-columns:1fr;
+          }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <section id="section">
+        <h2 class="sectiontitle">주간 RANKING</h2>
+        
+        <ul class="listbox">
+            <li class="list">
+                <div class="imagebox">
+                    <img src="image/naverstore1.jpg" class="image" >
+                    <img src="image/BEST1.png" class="best">
+                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
+                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+                </div>
+                <h3 class="producttitle">민소매 쉬폰 벨트 원피스</h3>  <!--상품이름-->
+                <p class="text">이번 25년 여름 오피스룩을 저격할 민소매 원피스입니다!</p>  <!--상품설명-->
+                <h3 class="price">89000</h3>     <!--할인가격-->
+                <p class="price2">132000</p>     <!--원래가격-->
+           </li>
+            <li class="list">
+                <div class="imagebox">
+                    <img src="image/naverstore2.jpg" class="image" >
+                    <img src="image/BEST2.png" class="best">
+                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
+                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+                </div>
+                </div>
+                <h3 class="producttitle">버튼 니트 슬림티</h3>   <!--상품이름-->
+                <p class="text">귀여운 색감, 덥지않은 얇은 린넨 제질의 니트를 가져왔어요~</p>  <!--상품설명-->
+                <h3 class="price">32000</h3>     <!--할인가격-->
+                <p class="price2">37000</p>     <!--원래가격-->
+            </li>
+            <li class="list">
+                <div class="imagebox">
+                    <img src="image/naverstore3.jpg" class="image" >
+                    <img src="image/BEST3.png" class="best">
+                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
+                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+                </div>
+                </div>
+                <h3 class="producttitle">쉬폰 나시 리본티</h3>   <!--상품이름-->
+                <p class="text">쉬폰 제질로 포근하고 부드럽게 제작된 하객룩을 가져왔어용~~</p>  <!--상품설명-->
+                <h3 class="price">59000</h3>     <!--할인가격-->
+                <p class="price2">62000</p>     <!--원래가격-->
+            </li>
+            <li class="list">
+                <div class="imagebox">
+                    <img src="image/naverstore4.jpg" class="image" >
+                    <img src="image/BEST4.png" class="best">
+                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
+                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+                </div>
+                </div>
+                <h3 class="producttitle">세미 부츠컷 슬랙스</h3>   <!--상품이름-->
+                <p class="text">오피스룩,데일리룩 으로 너무 이쁜 롱 기장 부츠컷 슬랙스에요!</p> <!--상품설명-->
+                <h3 class="price">47000</h3>     <!--할인가격-->
+                <p class="price2">55000</p>     <!--원래가격-->
+            </li>
+        </ul>
+
+    </section>
+    
+
+</body>
+
+
+
+</html>
